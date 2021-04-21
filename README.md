@@ -1,2 +1,3 @@
-# api-pessoas-testes-junit
-Design de API's RestFul com Spring Boot, TDD e JUnit5
+ #Desenvolvimento Orientado por Testes (Test Driven Development)
+ 
+ #Projeto de introdução ao TDD utilizando JUnit + Assertj + Mockito
