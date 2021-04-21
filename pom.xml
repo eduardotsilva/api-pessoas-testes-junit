@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.eduardo</groupId>
-  <artifactId>api-pessoas-testes-junit</artifactId>
+  <artifactId>pessoas-testes-junit</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>api-pessoas-testes-junit</name>
+  <name>pessoas-testes-junit</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
