@@ -69,7 +69,6 @@ public class CadastroPessoasTest {
         //execução
         cadastroPessoas.remover(pessoa);
 
-        //verificação
     }
 
 }
