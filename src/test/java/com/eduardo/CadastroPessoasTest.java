@@ -1,7 +1,6 @@
 package com.eduardo;
 
 import org.assertj.core.api.Assertions;
-import org.junit.Assert;
 import org.junit.Test;
 
 public class CadastroPessoasTest {
