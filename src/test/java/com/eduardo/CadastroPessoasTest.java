@@ -1,11 +1,13 @@
 package com.eduardo;
 
 import org.assertj.core.api.Assertions;
-import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 public class CadastroPessoasTest {
 
     @Test
+    @DisplayName("DEVE criar o cadastro de pessoas.")
     public void deveCriarOCadastroDePessoas(){
         //cenário e execução
         CadastroPessoas cadastroPessoas = new CadastroPessoas();
@@ -15,6 +17,7 @@ public class CadastroPessoasTest {
     }
 
     @Test
+    @DisplayName("DEVE adicionar uma pessoa")
     public void deveAdicionarUmaPessoa(){
         //cenário
         CadastroPessoas cadastroPessoas = new CadastroPessoas();
@@ -33,17 +36,21 @@ public class CadastroPessoasTest {
 
     }
 
-    @Test(expected = PessoaSemNotException.class)
+    @Test
+    @DisplayName("NÃO deve adicionar Pessoa com Nome Vazio")
     public void naoDeveAdicionarPessoaComNomeVazio(){
         //cenário
         CadastroPessoas cadastroPessoas = new CadastroPessoas();
         Pessoa pessoa = new Pessoa();
 
         //execução
-        cadastroPessoas.adicionar(pessoa);
+        org.junit.jupiter.api.Assertions
+                .assertThrows(PessoaSemNotException.class, ()-> cadastroPessoas.adicionar(pessoa));
+
     }
 
     @Test
+    @DisplayName("DEVE remover uma pessoa")
     public void deveRemoverUmaPessoa(){
         //cenário
         CadastroPessoas cadastroPessoas = new CadastroPessoas();
@@ -59,15 +66,17 @@ public class CadastroPessoasTest {
 
     }
 
-    @Test(expected = CadastroVazioException.class)
+    @Test
+    @DisplayName("DEVE lançar erro ao tentar remover pessoa inexistente")
     public void deveLancarErroAoTentarRemoverPessoaInexistente(){
         //cenário
         CadastroPessoas cadastroPessoas = new CadastroPessoas();
         Pessoa pessoa = new Pessoa();
 
         //execução
-        cadastroPessoas.remover(pessoa);
 
+        org.junit.jupiter.api.Assertions
+                .assertThrows(CadastroVazioException.class,()-> cadastroPessoas.remover(pessoa));
     }
 
 }
